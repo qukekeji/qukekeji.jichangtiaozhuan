@@ -1,64 +1,52 @@
-< =></>
-
-<>
-  <>
-    < = />
-    < = = />
-    <>稍等片刻</>
-    <>
-       {
-        : ;
-        : ;
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>稍等片刻</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
       }
-      . {
-        : ;
-        : ;
-        : ;
-        : ;
-        : ;
-        : ;
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100维赫;
       }
-      . {
-        : ;
-        : ;
-        
-        :  
-        : ;
+      .progress-bar {
+        width: 300像素;
+        height: 20像素;
+        background-color: #ccc;
+        border: 1像素 solid #000;
+        margin: 20像素;
       }
-      . {
-        : %;
-        : %;
-        
+      .progress-bar-inner {
+        width: 0%;
+        height: 100%;
+        background-color: #000;
       }
-    </>
-  </>
+    </style>
+  </head>
 
-  <>
-    < =>
-      <>稍等片刻</>
-      <>正在为您自动分配最新的官网地址</>
-      < =>
-        < = =></>
-      </>
-    </>
+  <body>
+    <div class="container">
+      <h1>稍等片刻</h1>
+      <h2>正在为您自动分配最新的官网地址</h2>
+      <div class="progress-bar">
+        <div class="progress-bar-inner" id="progress-bar"></div>
+      </div>
+    </div>
 
-    <>
-        = .();
-        = ;
-        = ;
+    <script>
+      const progressBar = document.getElementById('progress-bar');
+      let progress = 0;
+      const targetUrl = 'https://2.sakuranet1.vip/#/login';
 
-        = () => {
+      const updateProgress = () => {
         progress += 1;
         progressBar.style.width = `${progress}%`;
-
-        if (progress < 100) {
-          setTimeout(updateProgress, 10);
-        } else {
-          window.location.href = targetUrl;
-        }
-      };
-
-      updateProgress();
-    </script>
-  </body>
-</html>
